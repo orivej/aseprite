@@ -32,7 +32,7 @@ if(NOT USE_SHARED_GIFLIB)
   add_subdirectory(giflib)
 endif()
 
-if(WITH_WEBP_SUPPORT)
+if(WITH_WEBP_SUPPORT AND NOT USE_SHARED_LIBWEBP)
   # Enable img2webp so "webpmux" library is built
   set(WEBP_BUILD_IMG2WEBP ON CACHE BOOL "Build the img2webp animation tool.")
   add_subdirectory(libwebp)
